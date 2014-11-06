@@ -1,0 +1,10 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  	background-color: #ccc;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#result td{
+	border: 1px solid black;
+	width : 100px;
+}

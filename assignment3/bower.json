@@ -1,0 +1,12 @@
+{
+  "name": "assignment3",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sucheep-sri/fsa-sucheep",
+  "authors": [
+    "sucheep sriintra"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

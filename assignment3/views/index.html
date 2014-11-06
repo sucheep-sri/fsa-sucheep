@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>{{title}}</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<script src="libs/jquery/dist/jquery.min.js"></script>
+		<script>
+$.ajax({
+  url: '/users',
+  type: 'GET',
+  dataType : 'json',
+  success: function(data) {
+  	for( var x in data){
+  		$("#result").append("<tr><td>" + data[x].name +"</td><td>"+data[x].age+"</td><td>"+data[x].house+"</td></tr>");
+  	}
+  	console.log(data);
+  }
+});
+</script>
+	</head>
+
+<body>
+	<table id="result">
+ 		 <tr style="font-weight: bold;">
+		    <td>NAME</td>
+		    <td>AGE</td> 
+		    <td>HOUSE</td>
+  		</tr>
+	</table>
+</body>
+</html>
