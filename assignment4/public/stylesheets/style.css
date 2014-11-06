@@ -1,0 +1,49 @@
+#body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  	background-color: #EAF5FB;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#wrapper{
+  background-color:#FFF;
+  margin-top:2%;
+  width: 40%;
+  margin-left:auto;
+  margin-right:auto;
+  border:solid 1px #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  height:800px;
+  padding-top:3%;
+  padding-left:1%;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+#button-form
+{
+  padding-left:11%;
+  padding-top:3%;
+}
+#header-form{
+  text-align:center;
+  padding-bottom:8%;
+}
