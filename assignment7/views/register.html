@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<title>{{title}}</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel='stylesheet' href='/libs/bootstrap/dist/css/bootstrap.min.css' />
+		<link rel='stylesheet' href='/libs/bootstrap/dist/css/bootstrap.css' />
+		<link rel='stylesheet' href='/stylesheets/bootstrapValidator.min.css' />
+	</head>
+
+<body id="body">
+	<div id="wrapper">
+	<form role="form" id="register" class="form-horizontal" method="POST" action="/users" enctype=application/x-www-form-urlencoded 
+	data-bv-message="This value is not valid"
+    data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+    data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+    data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+
+		<div id="header-form">
+				<h2>REGISTRATION FORM</h2>
+	</div>
+		<div class="form-group">
+			<label for="firstName" class="col-sm-3 control-label">First Name</label>
+			<div class="col-sm-8">
+      	<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" data-toggle="tooltip"  title="Input your first name here." data-bv-notempty="true" data-bv-notempty-message="First name is required">
+    	</div>
+		</div><!--end firstname-->
+		<div class="clearfix"></div>
+
+		<div class="form-group">
+			<label for="lastName" class="col-sm-3 control-label">Last Name</label>
+			<div class="col-sm-8 ">
+				<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" data-toggle="tooltip" title="Input your last name here." data-bv-notempty="true" data-bv-notempty-message="Last name is required"/>
+			</div>
+		</div><!--end lastname-->
+		<div class="clearfix"></div>
+
+		<div class="form-group">
+			<label for="gender" class="col-sm-3 control-label">gender</label>
+			<div class="col-sm-8 ">
+				<select class="form-control" id="gender" name="gender" data-toggle="tooltip" data-placement="right" title="Choose your gender." data-bv-notempty="true" data-bv-notempty-message="Gender is required"/>
+					<option selected="selected" disabled="disabled">Choose option</option>
+  				<option value="0">Male</option>
+  				<option value="1">Female</option>
+				</select>
+			</div>
+		</div><!--end gender-->
+		<div class="clearfix"></div>
+
+		<div class="form-group">
+			<label for="email" class="col-sm-3 control-label">Email</label>
+			<div class="col-sm-8">
+					<input type="email" class="form-control" id="email" name="email" placeholder="Email" data-toggle="tooltip" title="Input your email here." data-bv-notempty="true" data-bv-notempty-message="Email is required"/>
+			</div>
+		</div><!--end email-->
+		<div class="clearfix"></div>
+		</br>
+		<div class="form-group">
+			<label for="password" class="col-sm-3 control-label">Password</label>
+			<div class="col-sm-8">
+					<input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" data-toggle="tooltip"title="Input your password here." title="Input your first name here."data-bv-notempty="true" data-bv-notempty-message="The password is required and cannot be empty"
+                   	data-bv-identical="true" data-bv-identical-field="confirmPassword" data-bv-identical-message="The password and its confirm are not the same"
+                   	data-bv-different="true" data-bv-different-field="email" data-bv-different-message="The password cannot be the same as username" />
+			</div>
+		</div><!--end password-->
+		<div class="clearfix"></div>
+		<div class="form-group">
+			<label for="confirmPassword" class="col-sm-3 control-label">Confirm Password</label>
+			<div class="col-sm-8">
+					<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" data-toggle="tooltip" title="Input confirm password here."
+					data-bv-notempty="true" data-bv-notempty-message="The confirm password is required and cannot be empty"
+                  	data-bv-identical="true" data-bv-identical-field="password" data-bv-identical-message="The password and its confirm are not the same"
+                   	data-bv-different="true" data-bv-different-field="email" data-bv-different-message="The password cannot be the same as username" />
+			</div>
+		</div><!--end password-->
+		<div class="clearfix"></div>
+		<br/>
+		<div class="clearfix"></div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label"></label>
+			<div class="col-sm-5">
+				<label class="h4">Choose your membership level</label>
+				<label class="inner-radio-form">
+					<input type="radio" name="memberType" id="0" value="0" checked> Free Membership
+				</label>
+				<label class="inner-radio-form">
+					<input type="radio" name="memberType" id="1" value="1"> Basic Level ( $30 - 30 Days )
+				</label>
+				<label class="inner-radio-form">
+					<input type="radio" name="memberType" id="2" value="2"> Advanced Level ( $100 - 1 Year )
+				</label>
+			</div>
+		</div><!--end radio-->		
+		<div class="clearfix"></div>
+		</br>
+		<div class="form-group">
+			<label for="description" class="col-sm-3 control-label">Your Description</label>
+			<div class="col-sm-8">
+				<textarea name="description" id="description" class="form-control" rows="4" placeholder="Your Description" data-toggle="tooltip" title="Input your description here."></textarea>
+			</div>
+		</div><!--end text area-->
+
+		<div class="clearfix"></div>
+  		</br>
+  		<div class="form-group">
+  			<label class="col-sm-3 control-label"></label>
+  			<div class="col-sm-5">
+  			<label class="inner-checkbox-form">
+  				<input type="checkbox" id="news" name="news" value="1" >&nbsp;Receive our news emails
+  			</label>  
+   			<label class="inner-checkbox-form">
+  				<input type="checkbox" id="promotion" name="promotion" value="1" >&nbsp;Receive our promotion emails
+  			</label>  				
+  			</div>
+  		</div><!--end checkbox-->
+		<div class="clearfix"></div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label"></label>
+			<div class="col-sm-5">
+	      			<button type="submit" class="btn btn-primary" id="signup" data-toggle="tooltip"title="Click here to confirm sign up.">Sign up</button>
+	      	</div>
+  		</div><!--end button-->
+	</div><!--end wrapper-->
+	</form>
+</body>
+		<script src="/libs/jquery/dist/jquery.min.js"></script>
+		<script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="/libs/bootstrap/js/tooltip.js"></script>
+		<script src="/js/bootstrapValidator.min.js"></script>
+		<script>
+$(document).ready(function() {
+    $('#register').bootstrapValidator();
+});
+		</script>
+<script>
+	 $(document).ready(function() {
+        $('#firstName').tooltip({placement: "bottom"});
+		$('#lastName').tooltip({placement: "bottom"});
+		$('#gender').tooltip({placement: "bottom"});
+		$('#email').tooltip({placement: "bottom"});
+		$('#password').tooltip({placement: "bottom"});
+		$('#confirmPassword').tooltip({placement: "bottom"});
+		$('#description').tooltip({placement: "bottom"});
+		$('#signup').tooltip({placement: "right"});
+    });
+</script>
+</html>
