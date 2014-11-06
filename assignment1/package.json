@@ -1,0 +1,22 @@
+{
+  "name": "fsa-sucheep",
+  "version": "0.0.0",
+  "description": "fsa-sucheep.s\r =============",
+  "main": "assignment1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sucheep-sri/fsa-sucheep.s.git"
+  },
+  "author": "sucheep sriintra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sucheep-sri/fsa-sucheep.s/issues"
+  },
+  "homepage": "https://github.com/sucheep-sri/fsa-sucheep.s",
+  "dependencies": {
+    "async": "^0.9.0"
+  }
+}
