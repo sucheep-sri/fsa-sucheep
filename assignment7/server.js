@@ -2,6 +2,7 @@ var Hapi = require('hapi');
 var Good = require('good');
 var Path = require('path');
 var Joi = require('joi');
+var Bcrypt = require('bcrypt');
 var Mongoose = require('mongoose');
 var Users = require('./models/users');
 
@@ -57,7 +58,7 @@ server.route({
                 lastName : req.payload.lastName,
                 gender : req.payload.gender,
                 email : req.payload.email,
-                password : req.payload.password,
+                password : Bcrypt.hashSync(req.payload.password, 10),
                 memberType : req.payload.memberType,
                 description : req.payload.description,
                 news : req.payload.news || 0,
