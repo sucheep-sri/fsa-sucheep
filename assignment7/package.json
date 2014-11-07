@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sucheep-sri/fsa-sucheep",
   "dependencies": {
+    "bcrypt": "^0.8.0",
     "good": "^3.0.1",
     "handlebars": "^2.0.0",
     "hapi": "^7.0.0",
