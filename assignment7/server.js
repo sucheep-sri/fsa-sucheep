@@ -47,6 +47,13 @@ server.route({
         res.view('register');
     }
 });
+server.route({
+    method : 'GET',
+    path : '/added',
+    handler: function(req, res){
+        res.view('added');
+    }
+});
 
 server.route({
     method : 'POST',
@@ -68,7 +75,7 @@ server.route({
             usersObj.save(function(err){
                 console.log(usersObj);
                 if(err) { res(err); console.log(err);}
-                res(usersObj);
+                res.view('added', {user : usersObj});
             });
         },
         validate : {
@@ -80,7 +87,7 @@ server.route({
                 password : Joi.string().required(),
                 confirmPassword : Joi.string().required(),
                 memberType : Joi.string().required(),
-                description : Joi.string(),
+                description : Joi.string().allow(''),
                 news : Joi.number().integer(),
                 promotion : Joi.number().integer()
             }
