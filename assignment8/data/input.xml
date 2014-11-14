@@ -1,0 +1,20 @@
+<doc>
+  <post>
+    <name>Harry Potter</name>
+    <age>18</age>
+    <gender>Male</gender>
+    <house>Gryffindor</house>	
+  </post>
+  <post>
+    <name>hermione granger</name>
+    <age>18</age>
+    <gender>Female</gender>
+    <house>Gryffindor</house>	
+  </post>
+  <post>
+    <name>Draco Lucius Malfoy</name>
+    <age>18</age>
+    <gender>Male</gender>
+    <house>Slytherin</house>	
+  </post>  
+</doc>

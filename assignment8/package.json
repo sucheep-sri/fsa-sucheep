@@ -1,0 +1,17 @@
+{
+  "name": "assignment8",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sucheep Sriintra",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "mysql": "^2.5.3",
+    "optimist": "^0.6.1",
+    "xml2js": "^0.4.4"
+  }
+}
