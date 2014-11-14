@@ -1,8 +1,21 @@
-var argv = require('optimist').argv;
+var stdio = require('stdio');
 var parser = require('xml2js').parseString;
 var fs = require('fs');
 var _ = require('lodash');
 var mysql = require('mysql');
+
+var ops = stdio.getopt({
+    'file': {key: 'f',description: 'input xml file', args: 1, mandatory: true},
+    'split': {key: 's',description: 'input block to insertn mysql', args: 1, mandatory: true},
+    'db': {key: 'd',description: 'input database name', args: 1, mandatory: true},
+    'table': {key: 't',description: 'input table name', args: 1, mandatory: true}
+});
+
+var xml = "./data/"+ops.file;
+var block = ops.split;
+var table = ops.table;
+var database = ops.db;
+console.log(xml);
 
 var connection = mysql.createConnection({
 	host : 'localhost',
@@ -13,11 +26,6 @@ var connection = mysql.createConnection({
 connection.connect(function(err){
 	if(err) console.log(err);
 });
-
-var xml = "./data/"+argv.file;
-var block = argv.split;
-var table = argv.table;
-var database = argv.db;
 
 connection.query('CREATE DATABASE IF NOT EXISTS ' + database + '', function(err, result){
 	if(err) {throw err;}
