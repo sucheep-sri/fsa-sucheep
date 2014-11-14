@@ -39,25 +39,32 @@ server.route({
 		res.view('index', {title : 'Hapi'});
 	}
 });
+server.route({
+    method : 'GET',
+    path : '/index',
+    handler: function(req, res){
+        res.view('index', {title : 'Hapi'});
+    }
+});
 
 server.route({
     method : 'GET',
     path : '/register',
     handler: function(req, res){
-        res.view('register');
+        res.view('member');
     }
 });
 server.route({
     method : 'GET',
-    path : '/added',
+    path : '/user',
     handler: function(req, res){
-        res.view('added');
+        res.view('user');
     }
 });
 
 server.route({
     method : 'POST',
-    path : '/users',
+    path : '/api/posts',
     config : {
         handler : function(req, res){
             var user = {
@@ -73,9 +80,8 @@ server.route({
             };
             var usersObj = new Users(user);
             usersObj.save(function(err){
-                console.log(usersObj);
                 if(err) { res(err); console.log(err);}
-                res.view('added', {user : usersObj});
+                else{res(usersObj);console.log(usersObj);}
             });
         },
         validate : {
