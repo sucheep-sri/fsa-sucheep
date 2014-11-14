@@ -15,7 +15,6 @@ var xml = "./data/"+ops.file;
 var block = ops.split;
 var table = ops.table;
 var database = ops.db;
-console.log(xml);
 
 var connection = mysql.createConnection({
 	host : 'localhost',
