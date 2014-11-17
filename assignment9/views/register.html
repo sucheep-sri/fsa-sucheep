@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FSA-assignment9</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://bootstraptaste.com" />
+<!-- css -->
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/libs/bootstrap/dist/css/bootstrap.min.css' />
+<link rel='stylesheet' href='/libs/bootstrap/dist/css/bootstrap.css' />
+<link rel='stylesheet' href='/stylesheets/bootstrapValidator.min.css' />
+<link rel="stylesheet" href="/stylesheets/fancybox/jquery.fancybox.css">
+<link rel="stylesheet"  href="/stylesheets/flexslider.css"/>
+<!-- Theme skin -->
+<link rel="stylesheet"  href="/skins/default.css"/>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span>FULL</span>STACKACADEMY</a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/index">Home</a></li>
+                        <li><a href="/my-posts">Member</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="breadcrumb">
+					<li><a href="/index"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+					<li class="active">Member</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+<form role="form" id="register" class="form-horizontal" enctype=application/x-www-form-urlencoded 
+	data-bv-message="This value is not valid"
+    data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+    data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+    data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+
+		<div id="header-form">
+				<h3>REGISTRATION</h3>
+	</div>
+		<div class="form-group">
+			<label for="firstName" class="col-sm-3 control-label">First Name</label>
+			<div class="col-sm-8">
+      	<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" data-toggle="tooltip"  title="Input your first name here." data-bv-notempty="true" data-bv-notempty-message="First name is required">
+    	</div>
+		</div><!--end firstname-->
+		<div class="clearfix"></div>
+
+		<div class="form-group">
+			<label for="lastName" class="col-sm-3 control-label">Last Name</label>
+			<div class="col-sm-8 ">
+				<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" data-toggle="tooltip" title="Input your last name here." data-bv-notempty="true" data-bv-notempty-message="Last name is required"/>
+			</div>
+		</div><!--end lastname-->
+		<div class="clearfix"></div>
+
+		<div class="form-group">
+			<label for="gender" class="col-sm-3 control-label">gender</label>
+			<div class="col-sm-8 ">
+				<select class="form-control" id="gender" name="gender" data-toggle="tooltip" data-placement="right" title="Choose your gender." data-bv-notempty="true" data-bv-notempty-message="Gender is required"/>
+					<option selected="selected" disabled="disabled">Choose option</option>
+  				<option value="0">Male</option>
+  				<option value="1">Female</option>
+				</select>
+			</div>
+		</div><!--end gender-->
+		<div class="clearfix"></div>
+
+		<div class="form-group">
+			<label for="email" class="col-sm-3 control-label">Email</label>
+			<div class="col-sm-8">
+					<input type="email" class="form-control" id="email" name="email" placeholder="Email" data-toggle="tooltip" title="Input your email here." data-bv-notempty="true" data-bv-notempty-message="Email is required"/>
+			</div>
+		</div><!--end email-->
+		<div class="clearfix"></div>
+		</br>
+		<div class="form-group">
+			<label for="password" class="col-sm-3 control-label">Password</label>
+			<div class="col-sm-8">
+					<input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" data-toggle="tooltip"title="Input your password here." title="Input your first name here."data-bv-notempty="true" data-bv-notempty-message="The password is required and cannot be empty"
+                   	data-bv-identical="true" data-bv-identical-field="confirmPassword" data-bv-identical-message="The password and its confirm are not the same"
+                   	data-bv-different="true" data-bv-different-field="email" data-bv-different-message="The password cannot be the same as username" />
+			</div>
+		</div><!--end password-->
+		<div class="clearfix"></div>
+		<div class="form-group">
+			<label for="confirmPassword" class="col-sm-3 control-label">Confirm Password</label>
+			<div class="col-sm-8">
+					<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" data-toggle="tooltip" title="Input confirm password here."
+					data-bv-notempty="true" data-bv-notempty-message="The confirm password is required and cannot be empty"
+                  	data-bv-identical="true" data-bv-identical-field="password" data-bv-identical-message="The password and its confirm are not the same"
+                   	data-bv-different="true" data-bv-different-field="email" data-bv-different-message="The password cannot be the same as username" />
+			</div>
+		</div><!--end password-->
+		<div class="clearfix"></div>
+		<br/>
+		<div class="clearfix"></div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label"></label>
+			<div class="col-sm-5">
+				<label class="h4">Choose your membership level</label>
+				<label class="inner-radio-form">
+					<input type="radio" name="memberType" id="0" value="0" checked> Free Membership
+				</label>
+				<label class="inner-radio-form">
+					<input type="radio" name="memberType" id="1" value="1"> Basic Level ( $30 - 30 Days )
+				</label>
+				<label class="inner-radio-form">
+					<input type="radio" name="memberType" id="2" value="2"> Advanced Level ( $100 - 1 Year )
+				</label>
+			</div>
+		</div><!--end radio-->		
+		<div class="clearfix"></div>
+		</br>
+		<div class="form-group">
+			<label for="description" class="col-sm-3 control-label">Your Description</label>
+			<div class="col-sm-8">
+				<textarea name="description" id="description" class="form-control" rows="4" placeholder="Your Description" data-toggle="tooltip" title="Input your description here."></textarea>
+			</div>
+		</div><!--end text area-->
+
+		<div class="clearfix"></div>
+  		</br>
+  		<div class="form-group">
+  			<label class="col-sm-3 control-label"></label>
+  			<div class="col-sm-5">
+  			<label class="inner-checkbox-form">
+  				<input type="checkbox" id="news" name="news" value="1" >&nbsp;Receive our news emails
+  			</label>  
+   			<label class="inner-checkbox-form">
+  				<input type="checkbox" id="promotion" name="promotion" value="1" >&nbsp;Receive our promotion emails
+  			</label>  				
+  			</div>
+  		</div><!--end checkbox-->
+		<div class="clearfix"></div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label"></label>
+			<div class="col-sm-5">
+	      			<button type="submit" class="btn btn-primary" id="signup" data-toggle="tooltip"title="Click here to confirm sign up.">Sign up</button>
+	      	</div>
+  		</div><!--end button-->
+	</div><!--end wrapper-->
+	</form>				
+			<div class="col-lg-4">
+				<aside class="right-sidebar">
+				<div class="widget">
+					<h5 class="widgetheading">Our Members</h5>
+					<div class="member-scroll">
+					<ul class="cat">
+						<li><i class="icon-angle-right"></i></li>
+					</ul>
+					</div><!--end member-scroll-->
+				</div>
+				<div class="widget">
+					<h5 class="widgetheading">Latest posts</h5>
+					<ul class="recent">
+						<li>
+						<img src="img/dummies/blog/65x65/thumb1.jpg" class="pull-left" alt="" />
+						<h6><a href="#">Lorem ipsum dolor sit</a></h6>
+						<p>
+							 Mazim alienum appellantur eu cu ullum officiis pro pri
+						</p>
+						</li>
+						<li>
+						<a href="#"><img src="img/dummies/blog/65x65/thumb2.jpg" class="pull-left" alt="" /></a>
+						<h6><a href="#">Maiorum ponderum eum</a></h6>
+						<p>
+							 Mazim alienum appellantur eu cu ullum officiis pro pri
+						</p>
+						</li>
+						<li>
+						<a href="#"><img src="img/dummies/blog/65x65/thumb3.jpg" class="pull-left" alt="" /></a>
+						<h6><a href="#">Et mei iusto dolorum</a></h6>
+						<p>
+							 Mazim alienum appellantur eu cu ullum officiis pro pri
+						</p>
+						</li>
+					</ul>
+				</div>
+				</aside>
+			</div>
+		</div>
+	</div>
+	</section>
+	<footer>
+	<div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<span>Sucheep.s@taskworld.com | 66910644315</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!--MODAL-->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" id="closeModal" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Successful</h4>
+      </div>
+      <div class="modal-body">
+      </br><center><span id="welcome"></span></center></br>
+        <center>Your registration was successful.</center></br>
+        <center>Thanks for becoming to our part.</center>
+        </br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /.modal -->
+<!--=========END modal==========-->
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/libs/jquery/dist/jquery.min.js"></script>
+<script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/libs/bootstrap/js/tooltip.js"></script>
+<script src="/js/bootstrapValidator.min.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.fancybox-media.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script src="/js/portfolio/jquery.quicksand.js"></script>
+<script src="/js/portfolio/setting.js"></script>
+<script src="/js/jquery.flexslider.js"></script>
+<script src="/js/animate.js"></script>
+<script src="/js/custom.js"></script>
+<script>
+$(document).ready(function() {
+    $('#register').bootstrapValidator();
+});
+</script>
+<script>
+	 $(document).ready(function() {
+        $('#firstName').tooltip({placement: "bottom"});
+		$('#lastName').tooltip({placement: "bottom"});
+		$('#gender').tooltip({placement: "bottom"});
+		$('#email').tooltip({placement: "bottom"});
+		$('#password').tooltip({placement: "bottom"});
+		$('#confirmPassword').tooltip({placement: "bottom"});
+		$('#description').tooltip({placement: "bottom"});
+		$('#signup').tooltip({placement: "right"});
+    });
+</script>
+<script>
+$(document).ready(function(){
+	$.ajax({
+		url: 'api/posts',
+		type: 'GET',
+		dataType: 'json',
+		success : function(data){
+			for(var x in data)
+			{
+				$('.cat').append('<li><i class="icon-angle-right"></i><a href="#">'+data[x].firstName+' '+data[x].lastName+'</a></li>');
+			}
+		}
+	});
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $('#signup').click(function(){
+    	$.ajax({
+    		url : '/api/posts',
+    		type : 'POST',
+    		data : $('#register').serialize(),
+    		success:function(data){
+    			$('html, body').animate({scrollTop : 0},'500', 'swing');
+    			$('#registerModal').modal('show');
+    			$('#welcome').append('Hi ! '+data.firstName+'  '+data.lastName);
+				$('#registerModal').on('hidden.bs.modal', function(e){
+					$('#register').trigger('reset');
+					$('#register').data('bootstrapValidator').resetForm();
+		    		$('.cat').append('<li><i class="icon-angle-right"></i><a href="#">'+data.firstName+' '+data.lastName+'</a></li>').hide().fadeIn(1000);
+				});    			
+    			
+    		}
+    	});  
+        return false;
+    });
+});
+</script>
+
+</body>
+
+</body>
+</html>
